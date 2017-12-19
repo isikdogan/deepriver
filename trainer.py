@@ -46,7 +46,6 @@ class TFModelTrainer:
             xent = tf.nn.softmax_cross_entropy_with_logits(labels=target_prob, logits=logits)
             xent = tf.expand_dims(xent, 3)
             xent = tf.nn.max_pool(xent, ksize=[1,8,8,1], strides=[1,8,8,1], padding='SAME')
-            print(xent)
             xent = tf.reduce_mean(xent)
             tf.add_to_collection(tf.GraphKeys.LOSSES, xent)
 
