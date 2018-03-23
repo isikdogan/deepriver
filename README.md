@@ -14,10 +14,10 @@ A River Centerline Extraction Model that uses Deep Convolutional Neural Networks
 
 ## Running instructions
 Training a model from scratch:
->> python trainer.py
+> python trainer.py
 
 Running inference on a given image (extracting the centerlines from a surface water map):
->> python inference.py
+> python inference.py
 
 Example images can be found in:
->> ./data
+> ./data
