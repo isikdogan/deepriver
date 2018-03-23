@@ -32,9 +32,9 @@ class TFInference:
         cv2.imwrite(save_path,(segmentation_map[:,:,1] * 255).astype(np.uint8))
 
 def main():
-    trainer = TFInference()
-    trainer.run('./data/synthetic_input.jpg', 'data/synthetic_input_centerlines.png')
-    trainer.run('./data/natural_input.jpg', 'data/natural_input_centerlines.png')
+    model = TFInference()
+    model.run('./data/synthetic_input.jpg', 'data/synthetic_input_centerlines.png')
+    model.run('./data/natural_input.jpg', 'data/natural_input_centerlines.png')
 
 if __name__ == '__main__':
     main()
